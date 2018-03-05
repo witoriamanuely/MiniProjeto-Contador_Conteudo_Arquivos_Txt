@@ -4,7 +4,7 @@ public class Contagem {
     private int contVogais = 0, contConsoantes = 0, contCaracteres = 0, contDigitos = 0 ;
     private int contEspacoBranco = 0;
     private String consoantes = "bcdfghjklmnpqrstuvxwyz";
-    private String vogais = "aeiouáâãàéôõêóú";
+    private String vogais = "aeiouáâãàéôõêóúí";
     private String digitos = "0123456789";
 
     public void contTextoArquivo(String textoArquivo) {

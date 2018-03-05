@@ -1,8 +1,6 @@
 public class Runner {
     public static void main(String[] args){
-        String texto = arquivo.lerArquivo("/home/witoriamanuely/IdeaProjects/untitled/src/Runner.txt");
-
-        String nome = "W1t0ri4 !!";
+        String texto = Arquivo.lerArquivo("/home/witoriamanuely/IdeaProjects/untitled/src/teste.txt");
         Contagem objeto = new Contagem();
         objeto.contTextoArquivo(texto.toLowerCase());
         System.out.println(objeto.getContVogais());

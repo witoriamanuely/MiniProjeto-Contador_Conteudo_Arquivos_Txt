@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class arquivo {
+public class Arquivo {
 
     public static String lerArquivo (String caminho){
         String conteudo = "";
