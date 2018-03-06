@@ -1,33 +1,39 @@
 import java.io.*;
 
 public class Arquivo {
-
     public static String lerArquivo (String caminho){
         String conteudo = "";
-        InputStream arq = null;
+        InputStream arquivo = null;
         InputStreamReader leitor = null;
-        BufferedReader lerArq = null;
+        BufferedReader ler = null;
+        File file = new File(caminho);
         try {
-            arq = new FileInputStream(caminho);
-            leitor = new InputStreamReader(arq);
-            lerArq = new BufferedReader(leitor);
+            if (!file.exists()){
+            file.createNewFile();
+            }
+
+            arquivo = new FileInputStream(caminho);
+            leitor = new InputStreamReader(arquivo);
+            ler = new BufferedReader(leitor);
             String linha = "";
-            linha = lerArq.readLine();
+            linha = ler.readLine();
             while (linha!=null){
                 conteudo+= linha;
-                linha = lerArq.readLine();
+                linha = ler.readLine();
 
             }
+        }catch (FileNotFoundException e){
+            System.out.print("Erro ao criar arquivo");
         }catch (IOException e){
             System.out.print("Erro ao ler arquivo");
 
-        }finally {
+        } finally {
             try {
-                lerArq.close();
+                ler.close();
                 leitor.close();
-                arq.close();
+                arquivo.close();
             }catch (IOException e){
-                System.out.print("Erro ao fecha arquivo");
+                System.out.print("Erro ao fechar arquivo");
             }
 
         }

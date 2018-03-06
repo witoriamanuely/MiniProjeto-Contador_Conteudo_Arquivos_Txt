@@ -1,4 +1,6 @@
 import java.lang.String;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Contagem {
     private int contVogais = 0, contConsoantes = 0, contCaracteres = 0, contDigitos = 0 ;
@@ -6,6 +8,7 @@ public class Contagem {
     private String consoantes = "bcdfghjklmnpqrstuvxwyz";
     private String vogais = "aeiouáâãàéôõêóúí";
     private String digitos = "0123456789";
+    private Map<String, Integer> dictConts = new HashMap<String, Integer>();
 
     public void contTextoArquivo(String textoArquivo) {
 
@@ -52,7 +55,6 @@ public class Contagem {
     public int getContVogais() {
         return contVogais;
     }
-
     public int getContConsoantes() {
         return contConsoantes;
     }
