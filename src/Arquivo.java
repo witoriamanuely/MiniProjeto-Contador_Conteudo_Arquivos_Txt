@@ -6,11 +6,7 @@ public class Arquivo {
         InputStream arquivo = null;
         InputStreamReader leitor = null;
         BufferedReader ler = null;
-        File file = new File(caminho);
         try {
-            if (!file.exists()){
-            file.createNewFile();
-            }
 
             arquivo = new FileInputStream(caminho);
             leitor = new InputStreamReader(arquivo);
