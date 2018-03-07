@@ -25,7 +25,7 @@ public class ImplementaThread extends Thread {
         System.out.println("Caracteres Especiais:"+cont.getContCaracteres());
         fim = System.currentTimeMillis();
         total = fim - inicio;
-        System.out.println("Tempo"+total);
+        System.out.println("Tempo:"+total);
 
     }
 }

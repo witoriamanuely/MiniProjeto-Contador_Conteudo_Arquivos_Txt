@@ -5,14 +5,18 @@ import java.util.Map;
 
 public class Contagem {
     private int contVogais = 0, contConsoantes = 0, contCaracteres = 0, contDigitos = 0;
-    private int contEspacoBranco = 0, contLinhas = 0;
+    private int contEspacoBranco = 0;
+    private int contLinhas = 0;
+
+
+
+    private int contFimThread = 0;
     private String consoantes = "bcdfghjklmnpqrstuvxwyz";
     private String vogais = "aeiouáâãàéôõêóúí";
     private String digitos = "0123456789";
     LineNumberReader lineCounter = null;
     private int totalVogais = 0, totalConso = 0, totalDig = 0, totalCarac = 0, totalEB = 0, totalLinhas = 0;
     private long totalTempo = 0;
-
 
     public void contTextoArquivo(String textoArquivo) {
 
@@ -102,6 +106,19 @@ public class Contagem {
         this.totalEB += somaEB;
         this.totalVogais += somaVogais;
         this.totalTempo += somaTempo;
+        this.contFimThread += 1;
+        System.out.println("Total de linhas:"+this.totalVogais);
+        System.out.println("Total Consoantes:"+this.totalConso);
+        System.out.println("Total Vogais:"+this.totalVogais);
+        System.out.println("Total Digitos:"+this.totalDig);
+        System.out.println("Total Espaço em Branco:"+this.totalEB);
+        System.out.println("Total de Caracteres Especiais:"+this.totalCarac);
+        System.out.println("Total de Tempo de Execução das Threads:"+this.totalTempo);
+    }
+    public int getContFimThread() {
+        return contFimThread;
+    }
+    public void imprimiSoma(){
         System.out.println("Total de linhas:"+this.totalVogais);
         System.out.println("Total Consoantes:"+this.totalConso);
         System.out.println("Total Vogais:"+this.totalVogais);

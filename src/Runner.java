@@ -1,6 +1,7 @@
 
 public class Runner {
     public static void main(String[] args){
+        Contagem g = new Contagem();
         String caminho1 = "/home/witoriamanuely/IdeaProjects/untitled/teste.txt";
         String texto1 = Arquivo.lerArquivo(caminho1);
         String caminho2 = "/home/witoriamanuely/IdeaProjects/untitled/arq2.txt";
@@ -14,6 +15,11 @@ public class Runner {
         new ImplementaThread(texto2.toLowerCase(), caminho2).start();
         new ImplementaThread(texto3.toLowerCase(), caminho3).start();
         new ImplementaThread(texto4.toLowerCase(), caminho4).start();
+
+        int quantThreads = 4;
+
+
+
 
 
     }
